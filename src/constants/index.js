@@ -1,0 +1,7 @@
+const SYNC = "SYNC";
+const ASYNC = "ASYNC";
+
+const WITH_ERRORS = "WITH_ERRORS";
+const WITHOUT_ERRORS = "WITHOUT_ERRORS";
+
+module.exports = {SYNC,ASYNC, WITH_ERRORS, WITHOUT_ERRORS};
