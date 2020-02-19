@@ -5,7 +5,6 @@ const {logger} = require('./logger');
 console.log('It works!');
 
 // YOUR CODE HERE
-
 const wordCount = 100;
 
 //TASK 05 - LOGGER TYPES ALLOWED ('FILE'/'CONSOLE'/'BOTH')
@@ -82,7 +81,7 @@ const bonusTask = () => {
         let time = process.hrtime();
         await printFizzBuzzAsync(wordCount, WITH_ERRORS, PRESERVE_ORDER, SLOW_ENABLED);
         const timeDiff = process.hrtime(time);
-        logger.log(`\n[ Time Elapsed : ${(timeDiff[0] * 1e9 + timeDiff[1])/100000} ms ]\n`);
+        logger.log(`\n[ Time Elapsed : ${(timeDiff[0] * 1e9 + timeDiff[1])/1000000} ms ]\n`);
 
         logger.log('\n******** BONUS TASK - COMPLETED ********\n');
 
@@ -97,6 +96,7 @@ const runAllTasks = async () => {
     task02();
     await task03();
     await task04();
+    //Task 05 is already implemented and you can change the log output type by calling logger.setLoggerType(loggerType) - loggerType can be "CONSOLE / FILE / BOTH"
     await bonusTask();
 
     logger.log('\n******** ALL TASKS - COMPLETED ********\n');

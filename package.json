@@ -4,12 +4,17 @@
   "description": "Javascript assessment for Harver engineering candidates",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "mocha './src/tests/*.spec.js'"
   },
   "author": "Phil Mander <philip@harver.com>",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "random-words": "^1.1.0",
     "word-maker": "file:word-maker"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1"
   }
 }

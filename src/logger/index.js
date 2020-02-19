@@ -2,7 +2,6 @@ const fs = require('fs');
 
 class Logger{
     constructor(logOutput = "BOTH"){
-        fs.unlinkSync('log.txt');
         this._logOutput = logOutput;
     }
 
@@ -26,20 +25,12 @@ class Logger{
                 console.log(message);
             }
             case "FILE":{
-                fs.appendFileSync('log.txt', `\n${message}`, 'utf8', (err)=>{
-                    if(err){
-                        console.error(err);
-                    }                
-                });
+                fs.appendFileSync('log.txt', `\n${message}`, 'utf8');
 
             }
             case "BOTH":{
                 console.log(message);
-                fs.appendFileSync('log.txt', `\n${message}`, 'utf8', (err)=>{
-                    if(err){
-                        console.error(err);
-                    }                
-                });
+                fs.appendFileSync('log.txt', `\n${message}`, 'utf8');
                 break;
             }
             default:
