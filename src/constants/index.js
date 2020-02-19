@@ -1,7 +1,10 @@
-const SYNC = "SYNC";
-const ASYNC = "ASYNC";
+const WITH_ERRORS = true;
+const WITHOUT_ERRORS = false;
 
-const WITH_ERRORS = "WITH_ERRORS";
-const WITHOUT_ERRORS = "WITHOUT_ERRORS";
+const IGNORE_ORDER = false;
+const PRESERVE_ORDER = true;
 
-module.exports = {SYNC,ASYNC, WITH_ERRORS, WITHOUT_ERRORS};
+const SLOW_ENABLED = true;
+const SLOW_DISABLED = false;
+
+module.exports = {WITH_ERRORS, WITHOUT_ERRORS, IGNORE_ORDER, PRESERVE_ORDER, SLOW_ENABLED, SLOW_DISABLED};
