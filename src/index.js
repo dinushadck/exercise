@@ -10,6 +10,7 @@ const wordCount = 100;
 //TASK 05 - LOGGER TYPES ALLOWED ('FILE'/'CONSOLE'/'BOTH')
 logger.setLoggerType('BOTH');
 
+//TASK 01
 const task01 = () => {
 
     logger.log('=========== TASK 01 ===========\n');
@@ -20,6 +21,7 @@ const task01 = () => {
     
 }
 
+//TASK 02
 const task02 = () => {
 
     logger.log('=========== TASK 02 ===========\n');
@@ -30,6 +32,7 @@ const task02 = () => {
 
 }
 
+//TASK 03
 const task03 = () => {
     return new Promise(async (resolve, reject) => {
 
@@ -45,6 +48,7 @@ const task03 = () => {
     })
 }
 
+//TASK 04
 const task04 = () => {
     return new Promise(async (resolve, reject) => {
 
@@ -69,6 +73,7 @@ const task04 = () => {
     })
 }
 
+//BONUS TASK
 const bonusTask = () => {
     return new Promise(async (resolve, reject) => {
 

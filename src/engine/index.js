@@ -1,6 +1,7 @@
 const { getRandomWordSync, getRandomWord } = require('word-maker');
 const {logger} = require('../logger');
 
+//Helper method which returns a promise to return index and random word / fizz buzz
 const randomWordHandler = async (index, withErrors = false, isFizzBuzz = false, slow = false) => {
     return new Promise(async (resolve, reject) => {
         try{
@@ -29,6 +30,7 @@ const randomWordHandler = async (index, withErrors = false, isFizzBuzz = false, 
 
 }
 
+//Helper method which returns a promise to simulate unordered behaviour for tasks 3 and 4
 const randomWordHandlerUnordered = async (index, withErrors = false, isFizzBuzz = false, slow = false) => {
     return new Promise(async (resolve, reject) => {
         try{
@@ -60,6 +62,7 @@ const randomWordHandlerUnordered = async (index, withErrors = false, isFizzBuzz 
 
 }
 
+//Function to handle all operations allowed related to random names algorithm synchronously
 const printRandomNamesSync = (wordCount = 100, withErrors = false) =>{
     try{
         Array.from(Array(wordCount)).map((_, i) => {
@@ -77,6 +80,7 @@ const printRandomNamesSync = (wordCount = 100, withErrors = false) =>{
     }
 }
 
+//Function to handle all operations allowed related to fizz buzz algorithm synchronously
 const printFizzBuzzSync = async (wordCount = 100, withErrors = false) =>{
     try{
         Array.from(Array(wordCount)).map(async(_, i) => {
@@ -104,6 +108,7 @@ const printFizzBuzzSync = async (wordCount = 100, withErrors = false) =>{
     }
 }
 
+//Function to handle all operations allowed related to random names algorithm asynchronously
 const printRandomNamesAsync = (wordCount = 100, withErrors = false, preserveOrder = false, slow = false) =>{
     
     return new Promise((resolve, reject) => {
@@ -130,6 +135,7 @@ const printRandomNamesAsync = (wordCount = 100, withErrors = false, preserveOrde
     
 }
 
+//Function to handle all operations allowed related to fizz buzz algorithm asynchronously
 const printFizzBuzzAsync = (wordCount = 100, withErrors = false, preserveOrder = false, slow = false) =>{
 
     return new Promise((resolve, reject) => {
