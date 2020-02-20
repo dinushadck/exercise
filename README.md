@@ -15,6 +15,14 @@ The tasks in this assessment use the included package `word-maker` which can be 
 `./word-maker`. This directory also contains a *README.md* with details about its usage and API. The module
 is already *required* for you in `src/index.js`
 
+## Test
+
+To run test case:
+
+```
+npm test
+```
+
 ## Tasks
 
 Complete these tasks in order. If you can't complete a task, just proceed with the next one.
