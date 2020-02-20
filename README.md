@@ -57,3 +57,24 @@ part of your solution does not need to actually run)
 **Bonus:**
 * The numbers should be printed in ascending order.
 * Imagine `getRandomWord`'s implementation is slow and takes 500ms to complete (call `getRandomWord({ slow: true })` to emulate this). Can you make your solution run in less than 1000ms with the `slow` option turned on?
+
+## Behaviour
+
+* Running npm start will run the application and will continue to run all the tasks in a sequential manner.
+* Running npm test will run the test case related to the bonus task.
+* By default the output of the tasks will be written to both console and log file.
+  * You may change the output mode by modifying below statement on src/index.js
+  
+  ```
+  //TASK 05 - LOGGER TYPES ALLOWED ('FILE'/'CONSOLE'/'BOTH')
+  logger.setLoggerType('BOTH');
+  ```
+* Bonus task will also print out the time elapsed to execute the task on both console and log file if its enabled.
+
+## Application Structure
+
+* Application start point is implemented on "src/index.js"
+* Application logic ("src/engine/index.js") is broken down to 4 common functions to handle the 2 types of algorithms (random names / fizz buzz) and their respective synchronous and asynchrnous behaviour.
+* Application output which includes writing output to console and file is implemented on "src/logger/index.js"
+* Application constants to increase readability and clarity is implemented on "src/constants/index.js"
+* Unit test for bonus task is implemented on "src/tests/test.spec.js"
